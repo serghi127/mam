@@ -21,7 +21,7 @@ def record_audio_and_save(save_path, n_times):
 
         myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=1)
         sd.wait()
-        write(save_path + "/s" + str(i+101) + ".wav", fs, myrecording)
+        write(save_path + "/s" + str(i) + ".wav", fs, myrecording)
         input(f"Press to record next or two stop press ctrl + C ({i + 1}/{n_times}): ")
 
-record_audio_and_save("mam_phrases/p1",20)
+record_audio_and_save("mam_phrases/p3",50)
