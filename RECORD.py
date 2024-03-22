@@ -24,4 +24,4 @@ def record_audio_and_save(save_path, n_times):
         write(save_path + "/s" + str(i+101) + ".wav", fs, myrecording)
         input(f"Press to record next or two stop press ctrl + C ({i + 1}/{n_times}): ")
 
-record_audio_and_save("mam_phrases/p2",20)
+record_audio_and_save("mam_phrases/p1",20)
