@@ -3,6 +3,8 @@ from scipy.io.wavfile import write
 import librosa
 import numpy as np
 from tensorflow.python.keras.models import load_model
+from tensorflow import keras
+#from keras import load_model
 
 fs = 16000
 seconds = 2
