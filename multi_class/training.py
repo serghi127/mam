@@ -12,7 +12,8 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
 #from plot_cm import plot_confusion_matrix
 
-num_phrases = 3
+num_phrases = 4 #number of phrases
+list_phrases = ["tsentaya", "wen intinawe", "sen intinawe", "te jatey"]
 
 df = pd.read_pickle("multi_class/final_audio_data_csv/audio_data.csv")
 X = df["feature"].values
@@ -55,7 +56,7 @@ y_test_c = np.argmax(y_test, axis = 1)
 
 
 cm = confusion_matrix(y_test_c, y_pred)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["tsentaya", "wen intinawe", "ok"])
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=list_phrases)
 disp.plot()
 plt.title("My confusion matrix")
 plt.show()

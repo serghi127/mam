@@ -17,12 +17,12 @@ def record_audio_and_save(save_path, n_times):
     input("To start recording Wake Word press Enter: ")
     for i in range(n_times):
         fs = 16000
-        seconds = 10
+        seconds = 2
 
         myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=1)
         sd.wait()
-        write(save_path + "/s" + str(i+18) + ".wav", fs, myrecording)
-        #input(f"Press to record next or two stop press ctrl + C ({i + 1}/{n_times}): ")
-        print("next")
+        write(save_path + "/s" + str(i+121) + ".wav", fs, myrecording)
+        input(f"Press to record next or two stop press ctrl + C ({i + 1}/{n_times}): ")
+        #print("next")
 
-record_audio_and_save("mam_phrases/background",23)
+record_audio_and_save("mam_phrases/p1",30)

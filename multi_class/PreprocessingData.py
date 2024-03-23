@@ -13,7 +13,8 @@ all_data = []
 data_path_dict = {
     0: ["mam_phrases/p1/" + file_path for file_path in os.listdir("mam_phrases/p1/")], #label tsentayay
     1: ["mam_phrases/p2/" + file_path for file_path in os.listdir("mam_phrases/p2/")], #label wen intinawe 
-    2: ["mam_phrases/p3/" + file_path for file_path in os.listdir("mam_phrases/p3/")]
+    2: ["mam_phrases/p3/" + file_path for file_path in os.listdir("mam_phrases/p3/")], #sik intinawe
+    3: ["mam_phrases/p4/" + file_path for file_path in os.listdir("mam_phrases/p4/")] #te jatey
     #add more numbers to dictionary 
 }
 

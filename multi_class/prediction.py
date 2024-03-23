@@ -26,6 +26,10 @@ while True:
     mfcc_processed = np.mean(mfcc.T, axis=0)
 
     prediction = model.predict(np.expand_dims(mfcc_processed, axis=0))
+    print("Tsentayay: " + str(prediction[:, 0]))
+    print("Wen intinawe: " + str(prediction[:, 1]))
+    print("Sik tintinawe: " + str(prediction[:, 2]))
+    print("Te jatey: " + str(prediction[:, 3]))
     if prediction[:, 0] > 0.99:
         print(f"Tsentayay")
         print("Confidence:", prediction[:, 0])
@@ -34,7 +38,11 @@ while True:
         print("Wen intinawe")
         print("Confidence: ", prediction[:, 1])
     elif prediction[:, 2] > 0.99:
-        print("okay")
+        print("Sik tintinawe")
         print("Confidence: ", prediction[:, 2])
+    elif prediction[:, 3] > 0.99:
+        print("Te jatey")
+        print("Confidence: ", prediction[:, 3])
     else:
         print("None")
+    print("\n")
