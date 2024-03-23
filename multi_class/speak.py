@@ -15,8 +15,6 @@ seconds = 2
 filename = "prediction.wav"
 class_names = ["Tzentayay", "Wen intinawe", "ok"]
 
-api_key_stt = "AIzaSyBb-d_KIhtoo1ZZ_d67kIdoCpZ-Fq8v85Q"
-
 def text_to_speech(text, language, voice):
     url = "https://texttospeech.googleapis.com/v1/text:synthesize?key=" + api_key_stt
     headers = {"Content-Type": "application/json", "Accept": "audio/wav"}
@@ -76,6 +74,5 @@ while True:
     else:
         print("None")
     os.system("C:/Users/sergh/OneDrive/Desktop/programming_files/python/mam/result.wav")
-    sleep(librosa.get_duration(filename='result.wav'))
     input("Press enter to speak: ")
     print("\n")
