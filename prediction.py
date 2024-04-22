@@ -31,3 +31,6 @@ while True:
     else:
         print("Tsentayay")
         print("Confidence: ", prediction[:, 0])
+
+
+#hello world
