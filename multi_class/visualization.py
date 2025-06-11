@@ -15,14 +15,25 @@ num_images = 2
 #     librosa.display.waveshow(data, sr=sample_rate, color='blue')
 #     plt.show()
 
+# for i in range(num_images):
+#     walley_sample = "mam_phrases/p3/s" + str(random.randint(0, 90)) + ".wav"
+#     data, sample_rate = librosa.load(walley_sample)
+#     librosa.display.waveshow(data, sr=sample_rate, color='blue')
+#     plt.show()
 for i in range(num_images):
-    walley_sample = "mam_phrases/p3/s" + str(random.randint(0, 90)) + ".wav"
+    walley_sample = "sound.wav"
     data, sample_rate = librosa.load(walley_sample)
     librosa.display.waveshow(data, sr=sample_rate, color='blue')
     plt.show()
 
+# for i in range(num_images):
+#     walley_sample = "mam_phrases/p4/s" + str(random.randint(0, 50)) + ".wav"
+#     data, sample_rate = librosa.load(walley_sample)
+#     librosa.display.waveshow(data, sr=sample_rate, color='blue')
+#     plt.show()
+
 for i in range(num_images):
-    walley_sample = "mam_phrases/p4/s" + str(random.randint(0, 50)) + ".wav"
+    walley_sample = "mam_phrases/ikjo_waja/s" + str(random.randint(0, 50)) + ".wav"
     data, sample_rate = librosa.load(walley_sample)
     librosa.display.waveshow(data, sr=sample_rate, color='blue')
     plt.show()

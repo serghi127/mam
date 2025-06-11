@@ -3,7 +3,7 @@ import numpy as np
 import array
 import wave
 
-def record_to_buffer(duration, sample_rate=44100):
+def record_to_buffer(duration, sample_rate):
     # Record sound
     recording = sd.rec(int(duration * sample_rate), samplerate=sample_rate, channels=1, dtype=np.int16)
     sd.wait()  # Wait until recording is finished
@@ -12,9 +12,9 @@ def record_to_buffer(duration, sample_rate=44100):
     buffer = array.array("h", recording.flatten())
     return buffer
 
-def play_buffer(buffer, sample_rate=44100):
-    sd.play(buffer, samplerate=sample_rate)
-    sd.wait()  # Wait until playback is finished
+# def play_buffer(buffer, sample_rate):
+#     sd.play(buffer, samplerate=sample_rate)
+#     sd.wait()  # Wait until playback is finished
 
 def save_as_wav(buffer, sample_rate, output_file):
     with wave.open(output_file, "w") as wf:
@@ -24,7 +24,7 @@ def save_as_wav(buffer, sample_rate, output_file):
         wf.writeframes(buffer.tobytes())
 
 # Example usage
-duration = 5  # Duration of recording in seconds
+duration = 2  # Duration of recording in seconds
 sample_rate = 16000  # Sample rate
 output_file = "sound.wav"
 
@@ -34,9 +34,9 @@ b = record_to_buffer(duration, sample_rate)
 print("Recording finished.")
 
 # Play back the recorded audio
-print("Playing back...")
-play_buffer(b, sample_rate)
-print("Playback finished.")
+# print("Playing back...")
+# play_buffer(b, sample_rate)
+# print("Playback finished.")
 
 # Save played audio as WAV
 print("Saving as WAV...")
